@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div id="story-wrapper">
+    <h2>{{ story.title }}</h2>
+    <h4>{{ story.author }}</h4>
+    <h4>{{ story.pub_date }}</h4>
+    <h4>{{ story.main_content }}</h4>
+
+    <div id="story-content">
+        <img src='../media/{{ story.main_image }}'>
+        {{ story.content|linebreaks }}
+    </div>
+
+    <a href="{% url 'users:author' pk=story.author.pk %}"> See other stories by {{ story.author.first_name }} {{ story.author.last_name }}</a>
+
+</div>
+{% endblock %}
+

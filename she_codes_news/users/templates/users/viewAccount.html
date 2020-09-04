@@ -1,0 +1,35 @@
+
+
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Your Account</h2>
+
+<br>
+
+
+<h3>Hi {{ object.first_name }}</h3>
+<br>
+
+<h3>Upload a new story</h3>
+<a href="{% url 'news:newStory' %}">Write New Story</a>
+<br>
+<br>
+<div>
+    <h3>Your Details</h3>
+<ul>
+    <li>Username:  {{ object.username }}</li>
+    <li>Email:  {{ object.email}}</li>
+    <li>About me:  {{ user.about_me}}</li>
+    <img src='..media/{{ user.profile_picture }}'>
+
+<br>
+
+<a href="{% url 'users:changeAccount' pk=request.user.pk %}"> Update your details here </a>
+
+
+</div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+<div class="story-card" id="story-card-{{ position }}">
+    <a href="{% url 'news:story' story.id %}">
+    <!-- takes you to the view of the story in the story card -->
+        {% if position < 5 %}
+            <img src='media/{{ story.main_image }}'>
+        {% else %}
+            <img src='media/{{ story.main_image }}'>
+        {% endif %}
+        <div class="story-card-text">
+            <h3>{{ story.title }}</h3>
+            <h4>{{ story.author }}</h4>
+            <h4>{{ story.pub_date }}</h4>
+            
+        </div>
+    </a>
+</div>
+ 
