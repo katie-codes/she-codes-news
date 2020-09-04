@@ -39,10 +39,28 @@ h3 {
 }
 
 h4 {
-    font-size: 18px;
+    font-size: 1rem;
     margin: 0;
-    line-height: 2;
-    font-family: quicksand
+    line-height: 1.5;
+    opacity: 80%;
+    padding-top: 10px;
+    font-family: monospace;
+
+
+}
+
+h5 {
+    font-size: 1.5rem;
+    margin: 0;
+    line-height: 1.5;
+    opacity: 80%;
+    padding-top: 10px;
+    font-family: monospace;
+    color: white;
+    font-variant-caps: all-petite-caps;
+    padding: 10px;
+    text-align: center;
+    letter-spacing: 2px;
 
 }
 
@@ -66,15 +84,39 @@ a {
 
 a, p {
     font-family: monospace;
+    line-height: 1.5;
+    opacity: 95%;
 }
 
 
 form {
-    background-color: red;
     padding: 20px;
+    background-color: white;
 
 }
 
 #id_title {
     min-width: 300px;
+}
+
+.button-styles {
+    font-variant-caps: all-petite-caps;
+    font-size: 20px;
+    border: 2px solid #d3e0db;
+    background-color: #c3ddd3;
+    padding: 10px;
+
+}
+
+.calltoaction {
+    font-weight: bold;
+}
+
+#latest-stories {
+    background-color: #c3ddd3;
+    padding: 50px
+}
+
+.story-card {
+    background-color: white;
 }

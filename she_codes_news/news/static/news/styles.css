@@ -85,5 +85,9 @@
     width: 50%;
 }
 
-
-
+#cats {
+    background-color: #ee3772;
+    float: right;
+    padding-right: 40px;
+    text-decoration-color: white;
+}

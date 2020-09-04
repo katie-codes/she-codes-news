@@ -8,8 +8,9 @@
         {% endif %}
         <div class="story-card-text">
             <h3>{{ story.title }}</h3>
-            <h4>{{ story.author }}</h4>
-            <h4>{{ story.pub_date }}</h4>
+            <h5 id=cats >{{ story.category }}</h5>
+            <h4>By: {{ user.first_name }}{{ user.last_name }}</h4>
+            <h4>Published: {{ story.pub_date }}</h4>
             
         </div>
     </a>

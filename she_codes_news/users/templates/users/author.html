@@ -5,10 +5,17 @@
 {% endblock %}
 {% block content %}
 <div class="container">
-    <h2>{{ object.username }}'s Profile</h2>
-    <p>Email: {{ object.email }}</p>
+
+    <!-- <img src= "{{ user.profile_picture.url }}"> -->
+    <h2>About {{ object.first_name }}</h2>
+    <p>{{ user.about_me }}'s Profile</p>
+    <br>
+    <p class="calltoaction"> Like my stories? Drop me a line here: {{ object.email }}</p>
+    <br>
+
+
     {% if object %}
-        <h2>{{ object.get_full_name|default:object.username }}'s Stories</h2>
+        <h2>{{ object.first_name }}'s Stories</h2>
         {% for story in object.stories.all %}
         <div class="story-card" id="story-card-{{ position }}">
             <a href="{% url 'news:story' story.id %}">
