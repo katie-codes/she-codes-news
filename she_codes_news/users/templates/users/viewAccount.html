@@ -21,7 +21,17 @@
     <li>Username:  {{ object.username }}</li>
     <li>Email:  {{ object.email}}</li>
     <li>About me:  {{ user.about_me}}</li>
-    <img src='..media/{{ user.profile_picture }}'>
+    <!-- <img src='media/{{ CustomUser.profile_picture }}'>
+    <img src='media/{{ story.profile_picture }}'>
+    <img src='media/{{ object.profile_picture }}'>
+    <img src='media/{{ author.profile_picture }}'>
+    <img src="media/images/IMG_0365">
+    <img src="media/images/IMG_0365.jpg">
+     -->
+    {{ user.profile_picture.url }}
+    <img src= "{{ user.profile_picture.url }}">
+
+
 
 <br>
 
